@@ -3,10 +3,13 @@ from datetime import datetime
 dateTime = datetime.now()
 now = dateTime.strftime("%d%b%Y%H%M%S%f")
 
-namefileError = "fileError"+now+".txt"
+namefileError = "output/fileError"+now+".txt"
 
-fileBase = open('base.txt','r')
-fileError = open('error.txt','r')
+base = input("Enter the base file: ")
+error = input("Enter the error file: ")
+
+fileBase = open(base,'r')
+fileError = open(error,'r')
 newFile = open(namefileError, "a")
 
 err = {}
